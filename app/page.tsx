@@ -205,12 +205,12 @@ export default function Home() {
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
-                Hi, I'm Jason
+                Hi, I'm Zalfy
               </span>
             </h1>
             
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Harvard Graduate • Software Engineer • AI Specialist
+              Full Stack Developer • AI Engineer • Data Scientist
             </p>
             
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -525,7 +525,7 @@ export default function Home() {
       <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground">&copy; {new Date().getFullYear()} Jason. Crafted with passion.</p>
+            <p className="text-muted-foreground">Made by Zalfy Putra Rezky</p>
             <div className="flex gap-6">
               <a href="https://github.com" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
               <a href="https://linkedin.com" className="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
