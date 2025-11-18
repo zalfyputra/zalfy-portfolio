@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Download, Github, Linkedin, Mail, ArrowRight, Code2, Brain, Database, Cloud, Palette, Rocket, TrendingUp, BarChart3, Zap, CheckCircle2, Layers } from "lucide-react"
-import { SiPython, SiJavascript, SiTypescript, SiCplusplus, SiKotlin, SiPhp, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiLaravel, SiFastapi, SiAndroidstudio, SiFigma, SiPostgresql, SiMongodb, SiRedis, SiFirebase, SiSupabase, SiSqlite, SiGooglecloud, SiVercel, SiNetlify, SiDocker, SiPytorch, SiTensorflow, SiScikitlearn, SiOpencv, SiTableau, SiStreamlit } from "react-icons/si"
+import { SiAngular, SiPython, SiJavascript, SiTypescript, SiCplusplus, SiKotlin, SiPhp, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiLaravel, SiFastapi, SiAndroidstudio, SiFigma, SiPostgresql, SiMongodb, SiRedis, SiFirebase, SiSupabase, SiSqlite, SiGooglecloud, SiVercel, SiNetlify, SiDocker, SiPytorch, SiTensorflow, SiScikitlearn, SiOpencv, SiTableau, SiStreamlit, SiBootstrap, SiExpress, SiNodedotjs, SiGo, SiOllama, SiHuggingface, SiKeras, SiHtml5, SiCss3, SiC, SiNestjs, SiAmazonwebservices } from "react-icons/si"
 import { TbBrandOpenai, TbDatabase } from "react-icons/tb"
 
 export default function Home() {
   const skillCategories = [
     {
-      title: "Full-Stack & Mobile Development",
+      title: "Full Stack Development",
       icon: Code2,
       color: "from-cyan-500 to-blue-500",
       skills: [
@@ -57,14 +57,14 @@ export default function Home() {
       title: "Full-Stack Development",
       icon: Layers,
       tools: [
-        { name: "Next.js", icon: SiNextdotjs },
         { name: "React", icon: SiReact },
-        { name: "Shadcn/ui", icon: Code2 },
+        { name: "Angular", icon: SiAngular },
+        { name: "Next.js", icon: SiNextdotjs },
         { name: "Tailwind CSS", icon: SiTailwindcss },
-        { name: "Laravel", icon: SiLaravel },
+        { name: "Node.js", icon: SiNodedotjs },
+        { name: "Express.js", icon: SiExpress },
+        { name: "NestJS", icon: SiNestjs },
         { name: "FastAPI", icon: SiFastapi },
-        { name: "Android Studio", icon: SiAndroidstudio },
-        { name: "Figma", icon: SiFigma },
       ],
     },
     {
@@ -74,25 +74,22 @@ export default function Home() {
         { name: "LLMs", icon: TbBrandOpenai },
         { name: "LangChain", icon: TbDatabase },
         { name: "LangGraph", icon: TbDatabase },
-        { name: "MetaGPT", icon: Brain },
-        { name: "LlamaIndex", icon: TbDatabase },
-        { name: "Vertex AI", icon: Brain },
-        { name: "Ollama", icon: Brain },
-        { name: "HuggingFace", icon: Brain },
+        { name: "OLlaMa", icon: SiOllama },
+        { name: "HuggingFace", icon: SiHuggingface },
       ],
     },
     {
       title: "Languages",
       icon: Code2,
       tools: [
-        { name: "Python", icon: SiPython },
-        { name: "JavaScript", icon: SiJavascript },
         { name: "TypeScript", icon: SiTypescript },
-        { name: "C", icon: SiCplusplus },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "Python", icon: SiPython },
+        { name: "Go", icon: SiGo },
+        { name: "HTML", icon: SiHtml5 },
+        { name: "CSS", icon: SiCss3 },
+        { name: "C", icon: SiC },
         { name: "C++", icon: SiCplusplus },
-        { name: "Kotlin", icon: SiKotlin },
-        { name: "PHP", icon: SiPhp },
-        { name: "SQL", icon: SiMysql },
       ],
     },
     {
@@ -102,25 +99,20 @@ export default function Home() {
         { name: "PostgreSQL", icon: SiPostgresql },
         { name: "MySQL", icon: SiMysql },
         { name: "MongoDB", icon: SiMongodb },
-        { name: "Redis", icon: SiRedis },
         { name: "Firebase RTDB", icon: SiFirebase },
         { name: "Firebase Firestore", icon: SiFirebase },
-        { name: "Supabase", icon: SiSupabase },
-        { name: "SQLite", icon: SiSqlite },
       ],
     },
     {
-      title: "Data Science & Machine Learning",
+      title: "Data Science",
       icon: BarChart3,
       tools: [
-        { name: "Scikit-Learn", icon: SiScikitlearn },
         { name: "TensorFlow", icon: SiTensorflow },
         { name: "PyTorch", icon: SiPytorch },
         { name: "OpenCV", icon: SiOpencv },
+        { name: "Keras", icon: SiKeras },
         { name: "Streamlit", icon: SiStreamlit },
-        { name: "Power BI", icon: BarChart3 },
-        { name: "Tableau", icon: SiTableau },
-        { name: "Excel", icon: Database },
+        { name: "Scikit-Learn", icon: SiScikitlearn },
       ],
     },
     {
@@ -128,6 +120,7 @@ export default function Home() {
       icon: Cloud,
       tools: [
         { name: "GCP", icon: SiGooglecloud },
+        { name: "AWS", icon: SiAmazonwebservices },
         { name: "Firebase", icon: SiFirebase },
         { name: "Vercel", icon: SiVercel },
         { name: "Netlify", icon: SiNetlify },
@@ -221,14 +214,12 @@ export default function Home() {
               <Button size="lg" className="gap-2 group px-8 py-6 text-lg" asChild>
                 <a href="/sample-cv.pdf" download="Jason-CV.pdf">
                   <Download className="w-5 h-5" />
-                  Download Resume
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  Download CV
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 px-8 py-6 text-lg" asChild>
+              <Button size="lg" variant="outline" className="gap-2 px-5 py-6 text-lg" asChild>
                 <a href="#contact">
                   Let's Connect
-                  <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
             </div>
@@ -351,7 +342,7 @@ export default function Home() {
                 <Card key={idx} className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border">
                   <CardHeader className="text-center pb-4">
                     <div className="mx-auto mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950 dark:to-blue-950 flex items-center justify-center">
-                      <Icon className={`w-8 h-8 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`} />
+                      <Icon className="w-8 h-8 text-cyan-600 dark:text-cyan-400" />
                     </div>
                     <CardTitle className="text-xl font-bold">{category.title}</CardTitle>
                   </CardHeader>
@@ -408,12 +399,12 @@ export default function Home() {
                         return (
                           <div 
                             key={toolIdx}
-                            className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-muted transition-colors group cursor-pointer"
+                            className="flex flex-col items-center gap-2 p-3 rounded-lg"
                           >
-                            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-muted transition-colors">
-                              <ToolIcon className="w-6 h-6 text-foreground/70 group-hover:text-foreground transition-colors" />
+                            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted/50">
+                              <ToolIcon className="w-6 h-6 text-foreground/70" />
                             </div>
-                            <span className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors font-medium leading-tight">
+                            <span className="text-xs text-center text-muted-foreground font-medium leading-tight">
                               {tool.name}
                             </span>
                           </div>

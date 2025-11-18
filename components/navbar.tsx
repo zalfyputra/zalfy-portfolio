@@ -35,8 +35,8 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/">
-          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform">Zalfy's</span> <span className="text-2xl font-medium text-white text-transparent hover:scale-105 transition-transform">Portfolio</span>
+          <Link href="/" className="flex items-center gap-1">
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform">Zalfy's Portfolio</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
@@ -45,7 +45,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-4 py-2 text-sm font-medium rounded-lg hover:bg-muted transition-colors"
+                className="px-4 py-2 text-sm font-medium rounded-lg hover:bg-muted hover:text-foreground transition-colors"
               >
                 {item.label}
               </Link>
@@ -80,7 +80,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-muted transition-colors"
+                className="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-muted hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
