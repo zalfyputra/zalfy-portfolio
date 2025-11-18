@@ -1,0 +1,10 @@
+This is a placeholder file. Replace this with your actual CV/Resume PDF.
+
+To replace this file:
+1. Export your CV as a PDF
+2. Rename it to "cv.pdf" or "sample-cv.pdf"
+3. Place it in the /public folder
+4. Update the download link in /app/page.tsx if you renamed it
+
+The download button will then serve your actual CV to visitors.
+
