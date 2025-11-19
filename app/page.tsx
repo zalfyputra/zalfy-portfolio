@@ -21,7 +21,7 @@ export default function Home() {
         "Automation Testing",
         "UI/UX Design",
         "Database Systems",
-        "CI/CD Pipelines",
+        "CI/CD Pipeline",
       ],
     },
     {
@@ -242,7 +242,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button size="lg" className="gap-2 group px-8 py-6 text-lg" asChild>
-                <a href="/sample-cv.pdf" download="Jason-CV.pdf">
+                <a href="https://drive.google.com/file/d/1jpDiJOvSfeCHOEFG5W0M8INLhrozyT3J/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Download className="w-5 h-5" />
                   Download CV
                 </a>
@@ -256,12 +256,12 @@ export default function Home() {
 
             <div className="flex gap-4 justify-center pt-4">
               <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
-                <a href="https://github.com/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="http://github.com/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="w-6 h-6" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
-                <a href="https://linkedin.com/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="http://linkedin.com/in/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="w-6 h-6" />
                 </a>
               </Button>
@@ -281,12 +281,15 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Image/Visual */}
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1">
-                <div className="w-full h-full rounded-3xl bg-background flex items-center justify-center text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600">
-                  J
+              <div className="aspect-square rounded-3xl p-1">
+                <div className="w-full h-full rounded-3xl bg-background overflow-hidden">
+                  <img 
+                    src="/cafe.png" 
+                    alt="Zalfy Putra Rezky" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400 rounded-full filter blur-2xl opacity-50"></div>
             </div>
 
             {/* Right Side - Content */}
@@ -300,7 +303,7 @@ export default function Home() {
 
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a recent graduate in Computer Engineering from Universitas Indonesia with an insatiable passion for technology and innovation. My journey has been defined by turning ambitious ideas into reality through code and creativity.
+                <span className="font-semibold text-foreground">Zalfy Putra Rezky</span> is a recent graduate in Computer Engineering from Universitas Indonesia with an insatiable passion for technology and innovation. My journey has been defined by turning ambitious ideas into reality through code and creativity.
                 </p>
                 <p>
                   With expertise spanning <span className="font-semibold text-foreground">Full-Stack Development</span>, <span className="font-semibold text-foreground">Data & AI Engineering</span>, and <span className="font-semibold text-foreground">Software Quality Assurance</span>, I bring a unique multidisciplinary perspective to every project I undertake.
@@ -311,30 +314,30 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-foreground">
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">10+ Projects</span>
+                    <span className="font-semibold">20+ Projects</span>
                   </div>
                   <p className="text-sm text-muted-foreground pl-7">Successfully delivered</p>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-foreground">
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">100K+ Users</span>
+                    <span className="font-semibold">2+ Years</span>
                   </div>
-                  <p className="text-sm text-muted-foreground pl-7">Impacted globally</p>
+                  <p className="text-sm text-muted-foreground pl-7">Leadership experience</p>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-foreground">
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">5+ Years</span>
+                    <span className="font-semibold">2+ Years</span>
                   </div>
-                  <p className="text-sm text-muted-foreground pl-7">Industry experience</p>
+                  <p className="text-sm text-muted-foreground pl-7">Professional experience</p>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-foreground">
                     <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">Award Winner</span>
+                    <span className="font-semibold">4 Years</span>
                   </div>
-                  <p className="text-sm text-muted-foreground pl-7">Innovation leader</p>
+                  <p className="text-sm text-muted-foreground pl-7">Academic experience</p>
                 </div>
               </div>
             </div>
@@ -544,13 +547,13 @@ export default function Home() {
 
                   {/* Buttons */}
                   <div className="flex gap-3 pt-2">
-                    <Button asChild size="sm" variant="outline" className="flex-1">
+                    <Button asChild size="sm" className="flex-1">
                       <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                         <Code className="w-4 h-4 mr-1" />
                         Demo
                       </a>
                     </Button>
-                    <Button asChild size="sm" className="flex-1">
+                    <Button asChild size="sm" variant="outline" className="flex-1">
                       <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-1" />
                         Code
@@ -586,13 +589,13 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <Button size="lg" className="gap-2 px-8 py-6 text-lg" asChild>
-                  <a href="mailto:jason@example.com">
+                  <a href="mailto:zalfyputra@gmail.com">
                     <Mail className="w-5 h-5" />
                     Send me an email
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" className="gap-2 px-8 py-6 text-lg" asChild>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <a href="http://linkedin.com/in/zalfyputra" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
                     Connect on LinkedIn
                   </a>
@@ -610,7 +613,7 @@ export default function Home() {
             <p className="text-muted-foreground">Made by Zalfy Putra Rezky</p>
             <div className="flex gap-6">
               <a href="https://github.com/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
-              <a href="https://linkedin.com/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
+              <a href="https://linkedin.com/in/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
               <a href="mailto:zalfyputra@gmail.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">Email</a>
             </div>
           </div>
