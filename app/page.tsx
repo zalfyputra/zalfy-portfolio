@@ -232,8 +232,8 @@ export default function Home() {
               </span>
             </h1>
             
-            <p className="text-2xl sm:text-2xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Full Stack Developer • AI Engineer • QA Engineer • Data Scientist
+            <p className="text-3xl sm:text-3xl md:text-3xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Full Stack Developer • AI/ML Engineer • QA Engineer
             </p>
             
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -300,13 +300,10 @@ export default function Home() {
 
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm <span className="font-bold text-foreground">Jason</span>, a Harvard graduate with an insatiable passion for technology and innovation. My journey has been defined by turning ambitious ideas into reality through code and creativity.
+                  I'm a recent graduate in Computer Engineering from Universitas Indonesia with an insatiable passion for technology and innovation. My journey has been defined by turning ambitious ideas into reality through code and creativity.
                 </p>
                 <p>
-                  With expertise spanning <span className="font-semibold text-foreground">full-stack development</span>, <span className="font-semibold text-foreground">AI engineering</span>, and <span className="font-semibold text-foreground">data science</span>, I bring a unique multidisciplinary perspective to every project I undertake.
-                </p>
-                <p>
-                  As a product manager and cloud architect, I don't just build software—I craft experiences that users love while ensuring they're built on rock-solid, scalable foundations.
+                  With expertise spanning <span className="font-semibold text-foreground">Full-Stack Development</span>, <span className="font-semibold text-foreground">Data & AI Engineering</span>, and <span className="font-semibold text-foreground">Software Quality Assurance</span>, I bring a unique multidisciplinary perspective to every project I undertake.
                 </p>
               </div>
 

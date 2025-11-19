@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Portfolio - Zalfy Putra",
-  description: "Zalfy's Portfolio - Full Stack Developer, AI Engineer, QA Engineer",
+  description: "Zalfy's Portfolio - Full Stack Developer, AI/ML Engineer, QA Engineer",
   icons: {
     icon: '/favicon.svg',
   },
