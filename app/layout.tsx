@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const dmSans = DM_Sans({ 
+const inter = Inter({ 
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-dm-sans",
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
-  title: "Jason's Portfolio | Software Developer & AI Engineer",
-  description: "Portfolio of Jason - Software Developer, AI Engineer, Product Manager, and Cloud Architect",
+  title: "Portfolio - Zalfy Putra",
+  description: "Zalfy's Portfolio - Full Stack Developer, AI Engineer, QA Engineer",
   icons: {
     icon: '/favicon.svg',
   },
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={dmSans.className}>
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

@@ -24,6 +24,7 @@ export function Navbar() {
     { href: "#skills", label: "Skills" },
     { href: "#tools", label: "Tools" },
     { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
   ]
 
   return (
@@ -36,7 +37,7 @@ export function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-1">
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform">Zalfy's Portfolio</span>
+            <span className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">Portfolio</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}

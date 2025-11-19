@@ -4,24 +4,24 @@ import { Navbar } from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Download, Github, Linkedin, Mail, ArrowRight, Code2, Brain, Database, Cloud, Palette, Rocket, TrendingUp, BarChart3, Zap, CheckCircle2, Layers } from "lucide-react"
-import { SiAngular, SiPython, SiJavascript, SiTypescript, SiCplusplus, SiKotlin, SiPhp, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiLaravel, SiFastapi, SiAndroidstudio, SiFigma, SiPostgresql, SiMongodb, SiRedis, SiFirebase, SiSupabase, SiSqlite, SiGooglecloud, SiVercel, SiNetlify, SiDocker, SiPytorch, SiTensorflow, SiScikitlearn, SiOpencv, SiTableau, SiStreamlit, SiBootstrap, SiExpress, SiNodedotjs, SiGo, SiOllama, SiHuggingface, SiKeras, SiHtml5, SiCss3, SiC, SiNestjs, SiAmazonwebservices } from "react-icons/si"
+import { Download, Github, Linkedin, Mail, ArrowRight, Code2, Brain, Database, Cloud, Palette, Rocket, TrendingUp, BarChart3, Zap, CheckCircle2, Layers, Code } from "lucide-react"
+import { SiAngular, SiPython, SiJavascript, SiTypescript, SiCplusplus, SiKotlin, SiPhp, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiLaravel, SiFastapi, SiAndroidstudio, SiFigma, SiPostgresql, SiMongodb, SiRedis, SiFirebase, SiSupabase, SiSqlite, SiGooglecloud, SiVercel, SiNetlify, SiDocker, SiPytorch, SiTensorflow, SiScikitlearn, SiOpencv, SiTableau, SiStreamlit, SiBootstrap, SiExpress, SiNodedotjs, SiGo, SiOllama, SiHuggingface, SiKeras, SiHtml5, SiCss3, SiC, SiNestjs, SiAmazonwebservices, SiLangchain, SiGitlab } from "react-icons/si"
 import { TbBrandOpenai, TbDatabase } from "react-icons/tb"
 
 export default function Home() {
   const skillCategories = [
     {
-      title: "Full Stack Development",
+      title: "Full-Stack Development",
       icon: Code2,
       color: "from-cyan-500 to-blue-500",
       skills: [
         "Frontend Development",
         "Backend Development",
-        "Mobile Development",
-        "API Development",
+        "Software Quality Assurance",
+        "Automation Testing",
         "UI/UX Design",
-        "DevOps Integration",
-        "Database Design",
+        "Database Systems",
+        "CI/CD Pipelines",
       ],
     },
     {
@@ -34,7 +34,7 @@ export default function Home() {
         "Model Context Protocol",
         "Retrieval-Augmented Generation",
         "Model Training & Fine-Tuning",
-        "AI Product Development",
+        "AI Full-Stack Development",
       ],
     },
     {
@@ -44,10 +44,10 @@ export default function Home() {
       skills: [
         "Data Analysis",
         "Data Visualization",
+        "Data Mining",
         "Statistical Modeling",
         "Machine Learning",
         "Deep Learning",
-        "Data Mining",
       ],
     },
   ]
@@ -72,7 +72,7 @@ export default function Home() {
       icon: Brain,
       tools: [
         { name: "LLMs", icon: TbBrandOpenai },
-        { name: "LangChain", icon: TbDatabase },
+        { name: "LangChain", icon: SiLangchain },
         { name: "LangGraph", icon: TbDatabase },
         { name: "OLlaMa", icon: SiOllama },
         { name: "HuggingFace", icon: SiHuggingface },
@@ -99,7 +99,6 @@ export default function Home() {
         { name: "PostgreSQL", icon: SiPostgresql },
         { name: "MySQL", icon: SiMysql },
         { name: "MongoDB", icon: SiMongodb },
-        { name: "Firebase RTDB", icon: SiFirebase },
         { name: "Firebase Firestore", icon: SiFirebase },
       ],
     },
@@ -121,20 +120,21 @@ export default function Home() {
       tools: [
         { name: "GCP", icon: SiGooglecloud },
         { name: "AWS", icon: SiAmazonwebservices },
+        { name: "Gitlab", icon: SiGitlab },
+        { name: "Docker", icon: SiDocker },
         { name: "Firebase", icon: SiFirebase },
         { name: "Vercel", icon: SiVercel },
         { name: "Netlify", icon: SiNetlify },
-        { name: "Docker", icon: SiDocker },
       ],
     },
   ]
 
   const timeline = [
     {
-      year: "2022 - Present",
-      title: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
-      type: "Full-time",
+      year: "Sep 2025 - Present",
+      title: "Software Engineer",
+      company: "Grab",
+      type: "Internship",
       description: "Leading AI integration projects and architecting scalable cloud solutions.",
       achievements: [
         "Architected and deployed 5+ AI-powered features serving 100K+ users",
@@ -144,10 +144,10 @@ export default function Home() {
       ],
     },
     {
-      year: "2020 - 2022",
-      title: "Product Manager",
-      company: "Innovation Startup",
-      type: "Full-time",
+      year: "Mar 2025 - Sep 2025",
+      title: "Software Engineer",
+      company: "Bank Jago",
+      type: "Internship",
       description: "Drove product strategy and cross-functional collaboration.",
       achievements: [
         "Launched 3 major product features increasing retention by 150%",
@@ -157,10 +157,10 @@ export default function Home() {
       ],
     },
     {
-      year: "2018 - 2020",
-      title: "Data Scientist",
-      company: "Analytics Firm",
-      type: "Full-time",
+      year: "Oct 2024 - Mar 2025",
+      title: "Software Engineer",
+      company: "Telkom Indonesia",
+      type: "Internship",
       description: "Built predictive models and data visualization solutions.",
       achievements: [
         "Developed ML models improving prediction accuracy by 35%",
@@ -169,25 +169,55 @@ export default function Home() {
         "Published research on advanced statistical methods",
       ],
     },
+    {
+      year: "Jul 2024 - Sep 2024",
+      title: "Full-Stack Developer",
+      company: "Garuda Maintenance Facility AeroAsia",
+      type: "Internship",
+      description: "Drove product strategy and cross-functional collaboration.",
+      achievements: [
+        "Launched 3 major product features increasing retention by 150%",
+        "Managed product roadmap serving enterprise clients",
+        "Coordinated between engineering, design, and sales teams",
+        "Conducted user research with 200+ customers",
+      ],
+    }
+  ]
+
+  const projects = [
+    {
+      title: "AI Chat Application",
+      description: "A real-time chat application powered by AI for intelligent responses and conversation management.",
+      image: "/projects/ai-chat.jpg", // Replace with your image
+      techStack: ["Next.js", "TypeScript", "OpenAI", "PostgreSQL", "Tailwind CSS"],
+      demoUrl: "https://demo-link.com",
+      repoUrl: "https://github.com/yourusername/project",
+    },
+    {
+      title: "E-Commerce Platform",
+      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
+      image: "/projects/ecommerce.jpg", // Replace with your image
+      techStack: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+      demoUrl: "https://demo-link.com",
+      repoUrl: "https://github.com/yourusername/project",
+    },
+    {
+      title: "Data Analytics Dashboard",
+      description: "Interactive dashboard for visualizing complex datasets with real-time analytics and custom reports.",
+      image: "/projects/dashboard.jpg", // Replace with your image
+      techStack: ["Python", "TensorFlow", "Streamlit", "PostgreSQL"],
+      demoUrl: "https://demo-link.com",
+      repoUrl: "https://github.com/yourusername/project",
+    },
   ]
 
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Navbar />
 
-      {/* Hero Section with Gradient */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-950 dark:to-blue-950">
-          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-        </div>
-        
-        {/* Floating Orbs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen flex items-center justify-center bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block">
               <Badge variant="secondary" className="px-4 py-2 text-sm font-medium">
@@ -202,8 +232,8 @@ export default function Home() {
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Full Stack Developer • AI Engineer • Data Scientist
+            <p className="text-2xl sm:text-2xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Full Stack Developer • AI Engineer • QA Engineer • Data Scientist
             </p>
             
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -225,29 +255,22 @@ export default function Home() {
             </div>
 
             <div className="flex gap-4 justify-center pt-4">
-              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12 hover:scale-110 transition-transform" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
+                <a href="https://github.com/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="w-6 h-6" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12 hover:scale-110 transition-transform" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
+                <a href="https://linkedin.com/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="w-6 h-6" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12 hover:scale-110 transition-transform" asChild>
-                <a href="mailto:jason@example.com" aria-label="Email">
+              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
+                <a href="mailto:zalfyputra@gmail.com" aria-label="Email">
                   <Mail className="w-6 h-6" />
                 </a>
               </Button>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full p-1">
-            <div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full animate-scroll"></div>
           </div>
         </div>
       </section>
@@ -340,7 +363,7 @@ export default function Home() {
               const Icon = category.icon
               return (
                 <Card key={idx} className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border">
-                  <CardHeader className="text-center pb-4">
+                  <CardHeader className="text-center">
                     <div className="mx-auto mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950 dark:to-blue-950 flex items-center justify-center">
                       <Icon className="w-8 h-8 text-cyan-600 dark:text-cyan-400" />
                     </div>
@@ -384,7 +407,7 @@ export default function Home() {
               const HeaderIcon = category.icon
               return (
                 <Card key={idx} className="hover:shadow-xl transition-all duration-300 border">
-                  <CardHeader className="pb-4">
+                  <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950 dark:to-blue-950">
                         <HeaderIcon className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
@@ -399,7 +422,7 @@ export default function Home() {
                         return (
                           <div 
                             key={toolIdx}
-                            className="flex flex-col items-center gap-2 p-3 rounded-lg"
+                            className="flex flex-col items-center gap-2  rounded-lg"
                           >
                             <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted/50">
                               <ToolIcon className="w-6 h-6 text-foreground/70" />
@@ -473,6 +496,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Portfolio</Badge>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Showcasing my best work and innovative solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, idx) => (
+              <Card key={idx} className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 group flex flex-col">
+                {/* Project Image */}
+                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-muted-foreground/20">
+                    {project.title.charAt(0)}
+                  </div>
+                  {/* Replace the above with actual image when you have one:
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  /> */}
+                </div>
+
+                <CardHeader>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="space-y-4 flex-grow flex flex-col">
+                  {/* Tech Stack */}
+                  <div className="flex-grow">
+                    <p className="text-sm font-semibold mb-2 text-muted-foreground">Tech Stack:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech, techIdx) => (
+                        <Badge key={techIdx} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex gap-3 pt-2">
+                    <Button asChild size="sm" variant="outline" className="flex-1">
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Code className="w-4 h-4 mr-1" />
+                        Demo
+                      </a>
+                    </Button>
+                    <Button asChild size="sm" className="flex-1">
+                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-1" />
+                        Code
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section - CTA */}
       <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
@@ -518,9 +612,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground">Made by Zalfy Putra Rezky</p>
             <div className="flex gap-6">
-              <a href="https://github.com" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
-              <a href="https://linkedin.com" className="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
-              <a href="mailto:jason@example.com" className="text-muted-foreground hover:text-foreground transition-colors">Email</a>
+              <a href="https://github.com/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
+              <a href="https://linkedin.com/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
+              <a href="mailto:zalfyputra@gmail.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">Email</a>
             </div>
           </div>
         </div>
