@@ -135,12 +135,12 @@ export default function Home() {
       title: "Software Engineer",
       company: "Grab",
       type: "Internship",
-      description: "Leading AI integration projects and architecting scalable cloud solutions.",
+      description: "Built and improved AI-driven backend automation features for GrabFood's Transaction Platform.",
       achievements: [
-        "Architected and deployed 5+ AI-powered features serving 100K+ users",
-        "Reduced infrastructure costs by 40% through cloud optimization",
-        "Led team of 6 engineers in building microservices architecture",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
+        "Developed AI-driven automation assistant for oncall, debugging, and incident workflows.",
+        "Improved backend integrations using Python, LangChain, and multi-agent systems.",
+        "Enhanced transaction platform reliability through log processing and SQL automation.",
+        "Contributed to AI assistant features supporting thousands of internal users.",
       ],
     },
     {
@@ -148,12 +148,12 @@ export default function Home() {
       title: "Software Engineer",
       company: "Bank Jago",
       type: "Internship",
-      description: "Drove product strategy and cross-functional collaboration.",
+      description: "Automated banking operations by improving data governance and asset-management systems.",
       achievements: [
-        "Launched 3 major product features increasing retention by 150%",
-        "Managed product roadmap serving enterprise clients",
-        "Coordinated between engineering, design, and sales teams",
-        "Conducted user research with 200+ customers",
+        "Improved project overview and data management for 200+ banking-related data.",
+        "Built internal project tracking systems for vendor management and initiave cost allocation.",
+        "Enhanced existing data governance systems with new visualizations and bug fixes used by 50+ personnel.",
+        "Streamlined the efficiency of asset management and auditing of company-owned devices.",
       ],
     },
     {
@@ -161,12 +161,12 @@ export default function Home() {
       title: "Software Engineer",
       company: "Telkom Indonesia",
       type: "Internship",
-      description: "Built predictive models and data visualization solutions.",
+      description: "Developed Full Stack applications, perform QA testing, and improved ML model performance.",
       achievements: [
-        "Developed ML models improving prediction accuracy by 35%",
-        "Created interactive dashboards for C-level executives",
-        "Processed and analyzed 10M+ data points daily",
-        "Published research on advanced statistical methods",
+        "Developed frontend and backend modules for enterprise platforms and government analytics tools.",
+        "Conducted QA testing and bug identification to improve system stability.",
+        "Produced comprehensive documentation for AI-powered platforms.",
+        "Processed 20,000+ social media data points to improve sentiment analysis and support decision-making.",
       ],
     },
     {
@@ -174,12 +174,12 @@ export default function Home() {
       title: "Full-Stack Developer",
       company: "Garuda Maintenance Facility AeroAsia",
       type: "Internship",
-      description: "Drove product strategy and cross-functional collaboration.",
+      description: "Built web solutions to improve aircraft design workflow efficiency and accelerating processing of audit reports.",
       achievements: [
-        "Launched 3 major product features increasing retention by 150%",
-        "Managed product roadmap serving enterprise clients",
-        "Coordinated between engineering, design, and sales teams",
-        "Conducted user research with 200+ customers",
+        "Developed a centralized activity tracking web system used by 30+ personnel.",
+        "Migrate frontend architecture with AngularJS and backend with NestJS for faster performance.",        
+        "Managed PostgreSQL databases handling 50+ audit and occurrence reports.",
+        "Improved UI/UX design and implemented new features for smoother workflows and reduced manual paperwork.",
       ],
     }
   ]
@@ -218,8 +218,8 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="inline-block">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
+            <div className="flex justify-center">
               <Badge variant="secondary" className="px-4 py-2 text-sm font-medium">
                 <Zap className="w-4 h-4 mr-2 inline" />
                 Available for new opportunities
@@ -232,7 +232,7 @@ export default function Home() {
               </span>
             </h1>
             
-            <p className="text-3xl sm:text-3xl md:text-3xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Full Stack Developer • AI/ML Engineer • QA Engineer
             </p>
             
@@ -345,6 +345,131 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
+      <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Portfolio</Badge>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Showcasing my best work and innovative solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, idx) => (
+              <Card key={idx} className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 group flex flex-col">
+                {/* Project Image */}
+                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-muted-foreground/20">
+                    {project.title.charAt(0)}
+                  </div>
+                  {/* Replace the above with actual image when you have one:
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  /> */}
+                </div>
+
+                <CardHeader>
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <CardDescription className="text-base">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+
+                <CardContent className="space-y-4 flex-grow flex flex-col">
+                  {/* Tech Stack */}
+                  <div className="flex-grow">
+                    <p className="text-sm font-semibold mb-2 text-muted-foreground">Tech Stack:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech, techIdx) => (
+                        <Badge key={techIdx} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex gap-3 pt-2">
+                    <Button asChild size="sm" className="flex-1">
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Code className="w-4 h-4 mr-1" />
+                        Demo
+                      </a>
+                    </Button>
+                    <Button asChild size="sm" variant="outline" className="flex-1">
+                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-1" />
+                        Code
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section - Timeline */}
+      <section id="experience" className="py-32 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Journey</Badge>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Experience</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Building innovative solutions and leading teams to success
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden md:block"></div>
+
+            <div className="space-y-12">
+              {timeline.map((item, idx) => (
+                <div key={idx} className="relative pl-0 md:pl-20">
+                  {/* Timeline Dot */}
+                  <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 border-4 border-background hidden md:block"></div>
+
+                  <Card className="hover:shadow-xl transition-all duration-300 border-2">
+                    <CardHeader>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                          <CardTitle className="text-2xl mb-2">{item.title}</CardTitle>
+                          <CardDescription className="text-base">
+                            <span className="font-semibold text-foreground">{item.company}</span> • {item.year}
+                          </CardDescription>
+                        </div>
+                        <Badge className="self-start sm:self-center">{item.type}</Badge>
+                      </div>
+                      <p className="text-muted-foreground mt-4">{item.description}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-3">
+                        {item.achievements.map((achievement, achIdx) => (
+                          <li key={achIdx} className="flex gap-3">
+                            <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section - Clean Badge Layout */}
       <section id="skills" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="container mx-auto max-w-7xl">
@@ -438,131 +563,6 @@ export default function Home() {
                 </Card>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section - Timeline */}
-      <section id="experience" className="py-32 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Journey</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Experience</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Building innovative solutions and leading teams to success
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden md:block"></div>
-
-            <div className="space-y-12">
-              {timeline.map((item, idx) => (
-                <div key={idx} className="relative pl-0 md:pl-20">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 border-4 border-background hidden md:block"></div>
-
-                  <Card className="hover:shadow-xl transition-all duration-300 border-2">
-                    <CardHeader>
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                        <div>
-                          <CardTitle className="text-2xl mb-2">{item.title}</CardTitle>
-                          <CardDescription className="text-base">
-                            <span className="font-semibold text-foreground">{item.company}</span> • {item.year}
-                          </CardDescription>
-                        </div>
-                        <Badge className="self-start sm:self-center">{item.type}</Badge>
-                      </div>
-                      <p className="text-muted-foreground mt-4">{item.description}</p>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {item.achievements.map((achievement, achIdx) => (
-                          <li key={achIdx} className="flex gap-3">
-                            <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-muted-foreground">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Portfolio</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Showcasing my best work and innovative solutions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, idx) => (
-              <Card key={idx} className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 group flex flex-col">
-                {/* Project Image */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-muted-foreground/20">
-                    {project.title.charAt(0)}
-                  </div>
-                  {/* Replace the above with actual image when you have one:
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  /> */}
-                </div>
-
-                <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <CardDescription className="text-base">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent className="space-y-4 flex-grow flex flex-col">
-                  {/* Tech Stack */}
-                  <div className="flex-grow">
-                    <p className="text-sm font-semibold mb-2 text-muted-foreground">Tech Stack:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.map((tech, techIdx) => (
-                        <Badge key={techIdx} variant="secondary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Buttons */}
-                  <div className="flex gap-3 pt-2">
-                    <Button asChild size="sm" className="flex-1">
-                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                        <Code className="w-4 h-4 mr-1" />
-                        Demo
-                      </a>
-                    </Button>
-                    <Button asChild size="sm" variant="outline" className="flex-1">
-                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-1" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
