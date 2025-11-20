@@ -134,6 +134,7 @@ export default function Home() {
       year: "Sep 2025 - Present",
       title: "Software Engineer",
       company: "Grab",
+      companyLogo: "/grab.png",
       type: "Internship",
       description: "Built and improved AI-driven backend automation features for GrabFood's Transaction Platform.",
       achievements: [
@@ -147,6 +148,7 @@ export default function Home() {
       year: "Mar 2025 - Sep 2025",
       title: "Software Engineer",
       company: "Bank Jago",
+      companyLogo: "/jago.png",
       type: "Internship",
       description: "Automated banking operations by improving data governance and asset-management systems.",
       achievements: [
@@ -160,6 +162,7 @@ export default function Home() {
       year: "Oct 2024 - Mar 2025",
       title: "Software Engineer",
       company: "Telkom Indonesia",
+      companyLogo: "/telkom.png",
       type: "Internship",
       description: "Developed Full Stack applications, perform QA testing, and improved ML model performance.",
       achievements: [
@@ -173,6 +176,7 @@ export default function Home() {
       year: "Jul 2024 - Sep 2024",
       title: "Full-Stack Developer",
       company: "Garuda Maintenance Facility AeroAsia",
+      companyLogo: "/gmf.png",
       type: "Internship",
       description: "Built web solutions to improve aircraft design workflow efficiency and accelerating processing of audit reports.",
       achievements: [
@@ -186,28 +190,52 @@ export default function Home() {
 
   const projects = [
     {
-      title: "AI Chat Application",
-      description: "A real-time chat application powered by AI for intelligent responses and conversation management.",
-      image: "/projects/ai-chat.jpg", // Replace with your image
-      techStack: ["Next.js", "TypeScript", "OpenAI", "PostgreSQL", "Tailwind CSS"],
-      demoUrl: "https://demo-link.com",
-      repoUrl: "https://github.com/yourusername/project",
+      title: "LumenLab: AI Research Hub",
+      description: "Organize users' papers and experiments, then utilize AI to summarize and answer questions about the their reading.",
+      image: "/projects/ai-chat.jpg",
+      techStack: ["Next.js", "FastAPI", "LangGraph", "LangChain", "PostgreSQL"],
+      demoUrl: "#",
+      repoUrl: "https://github.com/zalfyputra/LumenLab",
     },
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-      image: "/projects/ecommerce.jpg", // Replace with your image
-      techStack: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      demoUrl: "https://demo-link.com",
-      repoUrl: "https://github.com/yourusername/project",
+      title: "FitBuddy: AI Nutrition Assistant",
+      description: "A real-time chat application powered by AI that helps users plan workouts, track calories, or ask fitness questions.",
+      image: "/projects/ai-chat.jpg",
+      techStack: ["Next.js", "Golang", "LangGraph", "LangChain", "PostgreSQL"],
+      demoUrl: "#",
+      repoUrl: "https://github.com/zalfyputra/FitBuddy",
     },
     {
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for visualizing complex datasets with real-time analytics and custom reports.",
+      title: "Jago & DKatalis Asset Tracker",
+      description: "Web solution to enhance the efficiency of asset management and streamline the auditing of company-owned devices.",
+      image: "/projects/ecommerce.jpg",
+      techStack: ["Next.js", "Golang", "PostgeSQL"],
+      demoUrl: "#",
+      repoUrl: "#",
+    },
+    {
+      title: "STRAM FTUI Dashboard",
+      description: "Real-time road traffic monitoring system in FTUI for automatic vehicle type identification and accurate speed detection.",
       image: "/projects/dashboard.jpg", // Replace with your image
-      techStack: ["Python", "TensorFlow", "Streamlit", "PostgreSQL"],
-      demoUrl: "https://demo-link.com",
-      repoUrl: "https://github.com/yourusername/project",
+      techStack: ["React.js", "Firebase", "Raspberry Pi", "YOLOv8", "TensorFlow"],
+      demoUrl: "http://stram.vercel.app",
+      repoUrl: "http://github.com/zalfyputra/STRAM",
+    },
+    {
+      title: "GMF AeroAsia DOA Dashboard",
+      description: "A web solution to improve aircraft design workflow efficiency and accelerating processing of audit reports.",
+      image: "/projects/dashboard.jpg", // Replace with your image
+      techStack: ["TypeScript", "AngularJS", "NestJS", "PostgreSQL", "Google Cloud Platform"],
+      demoUrl: "#",
+      repoUrl: "https://github.com/zalfyputra/Dashboard-DOA-GMF",
+    },
+    {
+      title: "ArtNaon (Backend)",
+      description: "AI-powered painting genre detection mobile app that allows users to upload a painting and get a genre prediction with 95% accuracy.",
+      image: "/projects/dashboard.jpg", // Replace with your image
+      techStack: ["JavaScript", "Node.js", "Flask", "MySQL", "Docker", "Google Cloud Platform"],
+      demoUrl: "#",
+      repoUrl: "https://github.com/zalfyputra/ArtNaon-CC",
     },
   ]
 
@@ -242,7 +270,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button size="lg" className="gap-2 group px-8 py-6 text-lg" asChild>
-                <a href="https://drive.google.com/file/d/1jpDiJOvSfeCHOEFG5W0M8INLhrozyT3J/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1tCUXz1OBtXCJP3hKw48vCEVlekq1jeH9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Download className="w-5 h-5" />
                   Download CV
                 </a>
@@ -284,7 +312,7 @@ export default function Home() {
               <div className="aspect-square rounded-3xl p-1">
                 <div className="w-full h-full rounded-3xl bg-background overflow-hidden">
                   <img 
-                    src="/cafe.png" 
+                    src="/cafe.png"
                     alt="Zalfy Putra Rezky" 
                     className="w-full h-full object-cover"
                   />
@@ -441,16 +469,34 @@ export default function Home() {
 
                   <Card className="hover:shadow-xl transition-all duration-300 border-2">
                     <CardHeader>
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                        <div>
-                          <CardTitle className="text-2xl mb-2">{item.title}</CardTitle>
-                          <CardDescription className="text-base">
-                            <span className="font-semibold text-foreground">{item.company}</span> • {item.year}
-                          </CardDescription>
+                      <div className="flex gap-4 mb-4">
+                        {/* Company Logo */}
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
+                            <img 
+                              src={item.companyLogo} 
+                              alt={`${item.company} logo`}
+                              className="w-full h-full"
+                            />
+                          </div>
                         </div>
-                        <Badge className="self-start sm:self-center">{item.type}</Badge>
+                        
+                        {/* Title and Badge */}
+                        <div className="flex-grow">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+                            <div>
+                              <CardTitle className="text-xl sm:text-2xl mb-1">{item.title}</CardTitle>
+                              <CardDescription className="text-sm sm:text-base">
+                                <span className="font-semibold text-foreground">{item.company}</span> • {item.year}
+                              </CardDescription>
+                            </div>
+                            <Badge className="self-start">{item.type}</Badge>
+                          </div>
+                        </div>
                       </div>
-                      <p className="text-muted-foreground mt-4">{item.description}</p>
+                      
+                      {/* Description - Full Width */}
+                      <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-3">

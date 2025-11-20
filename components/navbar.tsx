@@ -76,22 +76,24 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t">
+          <div className="md:hidden py-4 space-y-2 border-t bg-background">
             {menuItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-3 text-sm font-medium rounded-lg hover:bg-muted hover:text-foreground transition-colors"
+                className="block px-4 py-3 text-base font-medium rounded-lg hover:bg-muted hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <Button asChild className="w-full">
-              <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
-                Get in Touch
-              </Link>
-            </Button>
+            <div className="px-4 pt-2">
+              <Button asChild className="w-full">
+                <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
+                  Get in Touch
+                </Link>
+              </Button>
+            </div>
           </div>
         )}
       </div>
