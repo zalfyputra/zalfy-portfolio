@@ -270,7 +270,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button size="lg" className="gap-2 group px-8 py-6 text-lg" asChild>
-                <a href="https://drive.google.com/file/d/1tCUXz1OBtXCJP3hKw48vCEVlekq1jeH9/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1DXTWlhHIj31xeqRH4Q4BTgSbjgrQF1xn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Download className="w-5 h-5" />
                   Download CV
                 </a>
