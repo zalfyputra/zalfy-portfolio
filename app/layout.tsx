@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Portfolio - Zalfy Putra",
-  description: "Zalfy's Portfolio - Full Stack Developer, AI/ML Engineer, QA Engineer",
+  description: "Zalfy's Software Engineer Portfolio Website",
   icons: {
     icon: '/favicon.svg',
   },
@@ -27,6 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
+          forcedTheme="dark"
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange

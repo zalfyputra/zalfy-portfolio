@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-tone-light: #b0e4cc;
+  --color-tone-mid: #408a71;
+  --color-tone-dark: #285a48;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -78,38 +81,39 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Palette: #091413 #285A48 #408A71 #B0E4CC (colorhunt.co/palette/091413285a48408a71b0e4cc) */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: #091413;
+  --foreground: #e8f5ef;
+  --card: #142c26;
+  --card-foreground: #e8f5ef;
+  --popover: #142c26;
+  --popover-foreground: #e8f5ef;
+  --primary: #b0e4cc;
+  --primary-foreground: #091413;
+  --secondary: #285a48;
+  --secondary-foreground: #e8f5ef;
+  --muted: #142c26;
+  --muted-foreground: #90c4aa;
+  --accent: #285a48;
+  --accent-foreground: #e8f5ef;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --border: #285a48;
+  --input: #285a48;
+  --ring: #408a71;
+  --chart-1: #b0e4cc;
+  --chart-2: #408a71;
+  --chart-3: #285a48;
+  --chart-4: #e8f5ef;
+  --chart-5: #142c26;
+  --sidebar: #091413;
+  --sidebar-foreground: #e8f5ef;
+  --sidebar-primary: #b0e4cc;
+  --sidebar-primary-foreground: #091413;
+  --sidebar-accent: #285a48;
+  --sidebar-accent-foreground: #e8f5ef;
+  --sidebar-border: #285a48;
+  --sidebar-ring: #408a71;
 }
 
 @layer base {
@@ -126,11 +130,11 @@
   }
 }
 
-/* Custom animations */
+/* Entrance animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -138,58 +142,33 @@
   }
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.6s ease-out;
+/* Staggered via --d */
+.hero-reveal {
+  opacity: 0;
+  animation: fadeIn 0.7s ease-out forwards;
+  animation-delay: var(--d, 0ms);
 }
 
-/* Blob animation for floating orbs */
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+/* Scroll reveal: toggled by components/reveal.tsx */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-.animate-blob {
-  animation: blob 7s infinite;
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-/* Scroll indicator animation */
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
     opacity: 1;
+    animation: none;
   }
-  100% {
-    transform: translateY(12px);
-    opacity: 0;
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
-}
-
-.animate-scroll {
-  animation: scroll 2s ease-in-out infinite;
-}
-
-/* Grid pattern */
-.bg-grid-pattern {
-  background-image: 
-    linear-gradient(to right, oklch(0.5 0 0 / 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(0.5 0 0 / 0.1) 1px, transparent 1px);
-  background-size: 4rem 4rem;
 }

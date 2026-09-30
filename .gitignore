@@ -47,3 +47,6 @@ next-env.d.ts
 
 # ignore .gitignore
 .gitignore
+
+# ignore build output
+/dist

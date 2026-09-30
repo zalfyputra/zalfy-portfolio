@@ -1,147 +1,38 @@
 "use client"
 
+import Image from "next/image"
 import { Navbar } from "@/components/navbar"
+import { Reveal } from "@/components/reveal"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Download, Github, Linkedin, Mail, ArrowRight, Code2, Brain, Database, Cloud, Palette, Rocket, TrendingUp, BarChart3, Zap, CheckCircle2, Layers, Code } from "lucide-react"
-import { SiAngular, SiPython, SiJavascript, SiTypescript, SiCplusplus, SiKotlin, SiPhp, SiMysql, SiNextdotjs, SiReact, SiTailwindcss, SiLaravel, SiFastapi, SiAndroidstudio, SiFigma, SiPostgresql, SiMongodb, SiRedis, SiFirebase, SiSupabase, SiSqlite, SiGooglecloud, SiVercel, SiNetlify, SiDocker, SiPytorch, SiTensorflow, SiScikitlearn, SiOpencv, SiTableau, SiStreamlit, SiBootstrap, SiExpress, SiNodedotjs, SiGo, SiOllama, SiHuggingface, SiKeras, SiHtml5, SiCss3, SiC, SiNestjs, SiAmazonwebservices, SiLangchain, SiGitlab } from "react-icons/si"
-import { TbBrandOpenai, TbDatabase } from "react-icons/tb"
+import { Download, Github, Linkedin, Mail, CodeXml, Code } from "lucide-react"
 
 export default function Home() {
-  const skillCategories = [
-    {
-      title: "Full-Stack Development",
-      icon: Code2,
-      color: "from-cyan-500 to-blue-500",
-      skills: [
-        "Frontend Development",
-        "Backend Development",
-        "Software Quality Assurance",
-        "Automation Testing",
-        "UI/UX Design",
-        "Database Systems",
-        "CI/CD Pipeline",
-      ],
-    },
-    {
-      title: "AI Engineering",
-      icon: Brain,
-      color: "from-cyan-500 to-blue-500",
-      skills: [
-        "Large Language Models",
-        "Multi-Agent Systems",
-        "Model Context Protocol",
-        "Retrieval-Augmented Generation",
-        "Model Training & Fine-Tuning",
-        "AI Full-Stack Development",
-      ],
-    },
-    {
-      title: "Data Science",
-      icon: BarChart3,
-      color: "from-cyan-500 to-blue-500",
-      skills: [
-        "Data Analysis",
-        "Data Visualization",
-        "Data Mining",
-        "Statistical Modeling",
-        "Machine Learning",
-        "Deep Learning",
-      ],
-    },
-  ]
-
-  const toolsCategories = [
-    {
-      title: "Full-Stack Development",
-      icon: Layers,
-      tools: [
-        { name: "React", icon: SiReact },
-        { name: "Angular", icon: SiAngular },
-        { name: "Next.js", icon: SiNextdotjs },
-        { name: "Tailwind CSS", icon: SiTailwindcss },
-        { name: "Node.js", icon: SiNodedotjs },
-        { name: "Express.js", icon: SiExpress },
-        { name: "NestJS", icon: SiNestjs },
-        { name: "FastAPI", icon: SiFastapi },
-      ],
-    },
-    {
-      title: "AI Engineering",
-      icon: Brain,
-      tools: [
-        { name: "LLMs", icon: TbBrandOpenai },
-        { name: "LangChain", icon: SiLangchain },
-        { name: "LangGraph", icon: TbDatabase },
-        { name: "OLlaMa", icon: SiOllama },
-        { name: "HuggingFace", icon: SiHuggingface },
-      ],
-    },
-    {
-      title: "Languages",
-      icon: Code2,
-      tools: [
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "JavaScript", icon: SiJavascript },
-        { name: "Python", icon: SiPython },
-        { name: "Go", icon: SiGo },
-        { name: "HTML", icon: SiHtml5 },
-        { name: "CSS", icon: SiCss3 },
-        { name: "C", icon: SiC },
-        { name: "C++", icon: SiCplusplus },
-      ],
-    },
-    {
-      title: "Database Systems",
-      icon: Database,
-      tools: [
-        { name: "PostgreSQL", icon: SiPostgresql },
-        { name: "MySQL", icon: SiMysql },
-        { name: "MongoDB", icon: SiMongodb },
-        { name: "Firebase Firestore", icon: SiFirebase },
-      ],
-    },
-    {
-      title: "Data Science",
-      icon: BarChart3,
-      tools: [
-        { name: "TensorFlow", icon: SiTensorflow },
-        { name: "PyTorch", icon: SiPytorch },
-        { name: "OpenCV", icon: SiOpencv },
-        { name: "Keras", icon: SiKeras },
-        { name: "Streamlit", icon: SiStreamlit },
-        { name: "Scikit-Learn", icon: SiScikitlearn },
-      ],
-    },
-    {
-      title: "Cloud & DevOps",
-      icon: Cloud,
-      tools: [
-        { name: "GCP", icon: SiGooglecloud },
-        { name: "AWS", icon: SiAmazonwebservices },
-        { name: "Gitlab", icon: SiGitlab },
-        { name: "Docker", icon: SiDocker },
-        { name: "Firebase", icon: SiFirebase },
-        { name: "Vercel", icon: SiVercel },
-        { name: "Netlify", icon: SiNetlify },
-      ],
-    },
-  ]
-
   const timeline = [
     {
-      year: "Sep 2025 - Present",
+      year: "March 2026 - Present",
+      title: "Software Engineer",
+      company: "Flip",
+      companyLogo: "/flip.png",
+      type: "Full-time",
+      achievements: [
+        "Building and scaling Gogogo, Flip's game and digital product top-up platform.",
+        "Contributing across backend services, web frontend, supplier integrations, and admin tooling.",
+        "Developing core pieces of Gogogo's internationalization platform to serve multi-region markets.",
+        "More coming soon...",
+      ],
+    },
+    {
+      year: "Sep 2025 - Feb 2026",
       title: "Software Engineer",
       company: "Grab",
       companyLogo: "/grab.png",
       type: "Internship",
-      description: "Built and improved AI-driven backend automation features for GrabFood's Transaction Platform.",
       achievements: [
-        "Developed AI-driven automation assistant for oncall, debugging, and incident workflows.",
-        "Improved backend integrations using Python, LangChain, and multi-agent systems.",
-        "Enhanced transaction platform reliability through log processing and SQL automation.",
-        "Contributed to AI assistant features supporting thousands of internal users.",
+        "Contributed to an AI oncall assistant built by the GrabFood Transaction Platform team",
+        "Authored playbooks across multiple issue categories to help with oncall investigations",
+        "Helped reduce manual oncall effort by standardizing how common issues are handled.",
       ],
     },
     {
@@ -150,12 +41,10 @@ export default function Home() {
       company: "Bank Jago",
       companyLogo: "/jago.png",
       type: "Internship",
-      description: "Automated banking operations by improving data governance and asset-management systems.",
       achievements: [
-        "Improved project overview and data management for 200+ banking-related data.",
-        "Built internal project tracking systems for vendor management and initiave cost allocation.",
-        "Enhanced existing data governance systems with new visualizations and bug fixes used by 50+ personnel.",
-        "Streamlined the efficiency of asset management and auditing of company-owned devices.",
+        "Improved project overview and data governance with new visualizations for bank-related data",
+        "Built internal project tracking systems for vendor management and initiave cost allocation",
+        "Streamlined the efficiency of asset management and auditing of company-owned devices",
       ],
     },
     {
@@ -164,12 +53,10 @@ export default function Home() {
       company: "Telkom Indonesia",
       companyLogo: "/telkom.png",
       type: "Internship",
-      description: "Developed Full Stack applications, perform QA testing, and improved ML model performance.",
       achievements: [
-        "Developed frontend and backend modules for enterprise platforms and government analytics tools.",
-        "Conducted QA testing and bug identification to improve system stability.",
-        "Produced comprehensive documentation for AI-powered platforms.",
-        "Processed 20,000+ social media data points to improve sentiment analysis and support decision-making.",
+        "Developed full stack apps for enterprise platforms and government analytics tools",
+        "Conducted QA testing and bug identification to improve system stability",
+        "Processed social media data points to improve sentiment analysis app and support decision-making",
       ],
     },
     {
@@ -178,12 +65,10 @@ export default function Home() {
       company: "Garuda Maintenance Facility AeroAsia",
       companyLogo: "/gmf.png",
       type: "Internship",
-      description: "Built web solutions to improve aircraft design workflow efficiency and accelerating processing of audit reports.",
       achievements: [
-        "Developed a centralized activity tracking web system used by 30+ personnel.",
-        "Migrate frontend architecture with AngularJS and backend with NestJS for faster performance.",        
-        "Managed PostgreSQL databases handling 50+ audit and occurrence reports.",
-        "Improved UI/UX design and implemented new features for smoother workflows and reduced manual paperwork.",
+        "Built web solutions to improve aircraft design workflow efficiency and accelerate processing of audit reports",
+        "Migrate architecture with modern tech stack for better performance",
+        "Enhanced UI/UX design and implemented new features for smoother workflows",
       ],
     }
   ]
@@ -246,157 +131,152 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
-            <div className="flex justify-center">
-              <Badge variant="secondary" className="px-4 py-2 text-sm font-medium">
-                <Zap className="w-4 h-4 mr-2 inline" />
-                Available for new opportunities
-              </Badge>
+          <div className="max-w-2xl mx-auto text-center">
+            {/* Profile Image */}
+            <div className="hero-reveal flex justify-center" style={{ "--d": "0ms" } as React.CSSProperties}>
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border bg-muted">
+                <Image
+                  src="/cafe.png"
+                  alt="Zalfy Putra"
+                  fill
+                  priority
+                  sizes="160px"
+                  className="object-cover"
+                />
+              </div>
             </div>
-            
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
-                Hi, I'm Zalfy
-              </span>
+
+            <h1
+              className="hero-reveal mt-8 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight"
+              style={{ "--d": "150ms" } as React.CSSProperties}
+            >
+              Zalfy Putra
             </h1>
-            
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Full Stack Developer • AI/ML Engineer • QA Engineer
+
+            <p
+              className="hero-reveal mt-4 text-lg sm:text-xl text-muted-foreground"
+              style={{ "--d": "300ms" } as React.CSSProperties}
+            >
+              Full Stack Developer &amp; AI Engineer
             </p>
-            
-            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+
+            <p
+              className="hero-reveal mt-6 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed"
+              style={{ "--d": "450ms" } as React.CSSProperties}
+            >
               Transforming complex challenges into elegant solutions through code, creativity, and cutting-edge AI technology.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Button size="lg" className="gap-2 group px-8 py-6 text-lg" asChild>
+            <div
+              className="hero-reveal mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
+              style={{ "--d": "600ms" } as React.CSSProperties}
+            >
+              <Button size="lg" className="gap-2" asChild>
                 <a href="https://drive.google.com/file/d/1DXTWlhHIj31xeqRH4Q4BTgSbjgrQF1xn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Download className="w-5 h-5" />
                   Download CV
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 px-5 py-6 text-lg" asChild>
-                <a href="#contact">
-                  Let's Connect
-                </a>
-              </Button>
-            </div>
-
-            <div className="flex gap-4 justify-center pt-4">
-              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
-                <a href="http://github.com/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <Github className="w-6 h-6" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
-                <a href="http://linkedin.com/in/zalfyputra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <Linkedin className="w-6 h-6" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full w-12 h-12" asChild>
-                <a href="mailto:zalfyputra@gmail.com" aria-label="Email">
-                  <Mail className="w-6 h-6" />
-                </a>
+              <Button size="lg" variant="outline" asChild>
+                <a href="#contact">Let&apos;s Connect</a>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section - Split Layout */}
-      <section id="about" className="py-32 px-4 sm:px-6 lg:px-8 relative">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Left Side - Image/Visual */}
-            <div className="relative">
-              <div className="aspect-square rounded-3xl p-1">
-                <div className="w-full h-full rounded-3xl bg-background overflow-hidden">
-                  <img 
-                    src="/cafe.png"
-                    alt="Zalfy Putra Rezky" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+      {/* Experience Section - Timeline */}
+      <section id="experience" className="py-32 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-5xl">
+          <Reveal className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              Professional <span className="text-tone-light">Journey</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Building innovative solutions and leading teams to success
+            </p>
+          </Reveal>
 
-            {/* Right Side - Content */}
-            <div className="space-y-6">
-              <div>
-                <Badge className="mb-4">About Me</Badge>
-                <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-                  Passionate About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Innovation</span>
-                </h2>
-              </div>
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-linear-to-b from-tone-light via-tone-mid to-tone-dark hidden md:block"></div>
 
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                <span className="font-semibold text-foreground">Zalfy Putra Rezky</span> is a recent graduate in Computer Engineering from Universitas Indonesia with an insatiable passion for technology and innovation. My journey has been defined by turning ambitious ideas into reality through code and creativity.
-                </p>
-                <p>
-                  With expertise spanning <span className="font-semibold text-foreground">Full-Stack Development</span>, <span className="font-semibold text-foreground">Data & AI Engineering</span>, and <span className="font-semibold text-foreground">Software Quality Assurance</span>, I bring a unique multidisciplinary perspective to every project I undertake.
-                </p>
-              </div>
+            <div className="space-y-12">
+              {timeline.map((item, idx) => (
+                <Reveal key={idx} className="relative pl-0 md:pl-20">
+                  {/* Timeline Dot */}
+                  <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-linear-to-br from-tone-light to-tone-mid border-4 border-background hidden md:block"></div>
 
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-foreground">
-                    <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">20+ Projects</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground pl-7">Successfully delivered</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-foreground">
-                    <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">2+ Years</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground pl-7">Leadership experience</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-foreground">
-                    <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">2+ Years</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground pl-7">Professional experience</p>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-foreground">
-                    <CheckCircle2 className="w-5 h-5 text-green-500" />
-                    <span className="font-semibold">4 Years</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground pl-7">Academic experience</p>
-                </div>
-              </div>
+                  <Card className="hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 gap-4">
+                    <CardHeader>
+                      <div className="flex gap-4">
+                        {/* Company Logo */}
+                        <div className="shrink-0">
+                          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-muted overflow-hidden">
+                            <Image
+                              src={item.companyLogo}
+                              alt={`${item.company} logo`}
+                              fill
+                              sizes="56px"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Title and Badge */}
+                        <div className="grow">
+                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+                            <div>
+                              <CardTitle className="text-xl sm:text-2xl mb-1">{item.title}</CardTitle>
+                              <CardDescription className="text-sm sm:text-base">
+                                <span className="font-semibold text-foreground">{item.company}</span> • {item.year}
+                              </CardDescription>
+                            </div>
+                            <Badge className="self-start">{item.type}</Badge>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="list-disc pl-5 space-y-2 marker:text-muted-foreground">
+                        {item.achievements.map((achievement, achIdx) => (
+                          <li key={achIdx} className="text-muted-foreground">
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </Reveal>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Portfolio</Badge>
+          <Reveal className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Projects</span>
+              Featured <span className="text-tone-light">Projects</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Showcasing my best work and innovative solutions
+              Few of my best works and highlighted achievements
             </p>
-          </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => (
-              <Card key={idx} className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 group flex flex-col">
+              <Reveal key={idx} delay={(idx % 3) * 100} className="h-full">
+              <Card className="h-full overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border-2 group flex flex-col">
                 {/* Project Image */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 overflow-hidden">
+                <div className="relative h-48 bg-linear-to-br from-tone-dark/60 to-tone-mid/20 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-muted-foreground/20">
                     {project.title.charAt(0)}
                   </div>
                   {/* Replace the above with actual image when you have one:
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   /> */}
@@ -409,9 +289,9 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="space-y-4 flex-grow flex flex-col">
+                <CardContent className="space-y-4 grow flex flex-col">
                   {/* Tech Stack */}
-                  <div className="flex-grow">
+                  <div className="grow">
                     <p className="text-sm font-semibold mb-2 text-muted-foreground">Tech Stack:</p>
                     <div className="flex flex-wrap gap-2">
                       {project.techStack.map((tech, techIdx) => (
@@ -439,194 +319,25 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Experience Section - Timeline */}
-      <section id="experience" className="py-32 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Journey</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Experience</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Building innovative solutions and leading teams to success
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 hidden md:block"></div>
-
-            <div className="space-y-12">
-              {timeline.map((item, idx) => (
-                <div key={idx} className="relative pl-0 md:pl-20">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 border-4 border-background hidden md:block"></div>
-
-                  <Card className="hover:shadow-xl transition-all duration-300 border-2">
-                    <CardHeader>
-                      <div className="flex gap-4 mb-4">
-                        {/* Company Logo */}
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
-                            <img 
-                              src={item.companyLogo} 
-                              alt={`${item.company} logo`}
-                              className="w-full h-full"
-                            />
-                          </div>
-                        </div>
-                        
-                        {/* Title and Badge */}
-                        <div className="flex-grow">
-                          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
-                            <div>
-                              <CardTitle className="text-xl sm:text-2xl mb-1">{item.title}</CardTitle>
-                              <CardDescription className="text-sm sm:text-base">
-                                <span className="font-semibold text-foreground">{item.company}</span> • {item.year}
-                              </CardDescription>
-                            </div>
-                            <Badge className="self-start">{item.type}</Badge>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Description - Full Width */}
-                      <p className="text-muted-foreground text-sm sm:text-base">{item.description}</p>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {item.achievements.map((achievement, achIdx) => (
-                          <li key={achIdx} className="flex gap-3">
-                            <TrendingUp className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                            <span className="text-muted-foreground">{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section - Clean Badge Layout */}
-      <section id="skills" className="py-32 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Expertise</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Capabilities</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit built through years of hands-on experience and continuous learning
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skillCategories.map((category, idx) => {
-              const Icon = category.icon
-              return (
-                <Card key={idx} className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 border">
-                  <CardHeader className="text-center">
-                    <div className="mx-auto mb-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950 dark:to-blue-950 flex items-center justify-center">
-                      <Icon className="w-8 h-8 text-cyan-600 dark:text-cyan-400" />
-                    </div>
-                    <CardTitle className="text-xl font-bold">{category.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {category.skills.map((skill, skillIdx) => (
-                        <Badge 
-                          key={skillIdx} 
-                          variant="secondary"
-                          className="px-3 py-1.5 text-sm font-normal bg-muted hover:bg-muted/80 transition-colors"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Tools & Technologies Section */}
-      <section id="tools" className="py-32 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Tech Stack</Badge>
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              Tools & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Technologies</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Leveraging cutting-edge technologies to build innovative solutions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {toolsCategories.map((category, idx) => {
-              const HeaderIcon = category.icon
-              return (
-                <Card key={idx} className="hover:shadow-xl transition-all duration-300 border">
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950 dark:to-blue-950">
-                        <HeaderIcon className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
-                      </div>
-                      <CardTitle className="text-lg font-bold">{category.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-4 gap-4">
-                      {category.tools.map((tool, toolIdx) => {
-                        const ToolIcon = tool.icon
-                        return (
-                          <div 
-                            key={toolIdx}
-                            className="flex flex-col items-center gap-2  rounded-lg"
-                          >
-                            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted/50">
-                              <ToolIcon className="w-6 h-6 text-foreground/70" />
-                            </div>
-                            <span className="text-xs text-center text-muted-foreground font-medium leading-tight">
-                              {tool.name}
-                            </span>
-                          </div>
-                        )
-                      })}
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section - CTA */}
-      <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
-        
-        <div className="container mx-auto max-w-4xl relative z-10">
+      <section id="contact" className="py-32 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-4xl">
+          <Reveal>
           <Card className="border-2 shadow-2xl">
             <CardContent className="p-12 text-center space-y-8">
-              <div className="inline-block p-4 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20">
-                <Rocket className="w-12 h-12 text-purple-600 dark:text-purple-400" />
+              <div className="inline-block p-4 rounded-full bg-linear-to-br from-tone-light/20 to-tone-mid/20">
+                <CodeXml className="w-12 h-12 text-tone-light" />
               </div>
-              
-              <div className="space-y-4">
+
+              <div className="space-y-10">
                 <h2 className="text-4xl sm:text-5xl font-bold">
-                  Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Amazing</span>
+                  Let's Build Something <span className="text-tone-light">Amazing</span>
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
@@ -646,26 +357,23 @@ export default function Home() {
                     Connect on LinkedIn
                   </a>
                 </Button>
+                <Button size="lg" variant="outline" className="gap-2 px-8 py-6 text-lg" asChild>
+                  <a href="http://github.com/zalfyputra" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-5 h-5" />
+                    View GitHub
+                  </a>
+                </Button>
               </div>
             </CardContent>
           </Card>
+          </Reveal>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground">Made by Zalfy Putra Rezky</p>
-            <div className="flex gap-6">
-              <a href="https://github.com/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">GitHub</a>
-              <a href="https://linkedin.com/in/zalfyputra" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">LinkedIn</a>
-              <a href="mailto:zalfyputra@gmail.com" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors">Email</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <p className="py-8 px-4 text-center text-sm text-muted-foreground">
+        © 2026 Zalfy Putra
+      </p>
     </main>
   )
 }
-
