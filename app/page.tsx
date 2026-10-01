@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { BackToTop } from "@/components/back-to-top"
 import { Navbar } from "@/components/navbar"
 import { Reveal } from "@/components/reveal"
 import { Button } from "@/components/ui/button"
@@ -17,9 +18,9 @@ export default function Home() {
       companyLogo: "/flip.png",
       type: "Full-time",
       achievements: [
-        "Building and scaling Gogogo, Flip's game and digital product top-up platform.",
-        "Contributing across backend services, web frontend, supplier integrations, and admin tooling.",
-        "Developing core pieces of Gogogo's internationalization platform to serve multi-region markets.",
+        "Building and scaling Gogogo, Flip's game top-up platform",
+        "Contributing across backend services, web frontend, supplier integrations, and admin tools",
+        "Developing core pieces of Gogogo's internationalization platform to serve multi-region markets",
         "More coming soon...",
       ],
     },
@@ -32,7 +33,7 @@ export default function Home() {
       achievements: [
         "Contributed to an AI oncall assistant built by the GrabFood Transaction Platform team",
         "Authored playbooks across multiple issue categories to help with oncall investigations",
-        "Helped reduce manual oncall effort by standardizing how common issues are handled.",
+        "Helped reduce manual oncall effort by standardizing how common issues are handled",
       ],
     },
     {
@@ -127,6 +128,7 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
       <Navbar />
+      <BackToTop />
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center bg-background">
@@ -164,7 +166,7 @@ export default function Home() {
               className="hero-reveal mt-6 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed"
               style={{ "--d": "450ms" } as React.CSSProperties}
             >
-              Transforming complex challenges into elegant solutions through code, creativity, and cutting-edge AI technology.
+              Transforming complex challenges into elegant solutions through code, creativity, and technology.
             </p>
 
             <div
@@ -261,7 +263,7 @@ export default function Home() {
               Featured <span className="text-tone-light">Projects</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Few of my best works and highlighted achievements
+              Several of my best works and contributions
             </p>
           </Reveal>
 
